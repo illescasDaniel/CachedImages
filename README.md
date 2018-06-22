@@ -11,7 +11,7 @@ Main features:
 ### Examples
 
 ```swift
-CachedImages.shared.load(url: "https://test.com/image.jpg", into: imageView)
+CachedImages.shared.load(image: "https://test.com/image.jpg", into: imageView)
 ```
 
 ```swift

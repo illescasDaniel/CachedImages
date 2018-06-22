@@ -57,7 +57,7 @@ class CachedImages {
 		}
 	}
 	
-	func load(url: String, into imageView: UIImageView) {
+	func load(image: String, into imageView: UIImageView) {
 		self.load(url: url, onSuccess: { image in
 			imageView.image = image
 		})
