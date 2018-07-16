@@ -73,7 +73,12 @@ class CachedImages {
 		}
 	}
 	
-	func load(image imageURL: String, into imageView: UIImageView) {
+	public func load(image imageURL: String, into imageView: UIImageView, placeholder: UIImage? = nil) {
+		DispatchQueue.main.async {
+			if let placeholderImage = placeholder {
+				imageView.image = placeholderImage
+			}
+		}
 		self.load(url: imageURL, onSuccess: { image in
 			imageView.image = image
 		})
