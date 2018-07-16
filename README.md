@@ -15,6 +15,13 @@ CachedImages.shared.load(image: "https://test.com/image.jpg", into: imageView)
 ```
 
 ```swift
+CachedImages.shared
+    .load(image: "imageurl")
+    .placeholder(image: UIImage())
+    .into(imageView: UIImageView())
+```
+
+```swift
 CachedImages.shared.load(url: fullQuestion.imageURL ?? "", onSuccess: { cachedImage in
 	  self.activityIndicatorView.stopAnimating()
 	  self.questionImageButton.setImage(cachedImage, for: .normal)
